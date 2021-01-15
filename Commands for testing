@@ -1,0 +1,21 @@
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+
+docker exec -it single-kafka /opt/kafka/bin/kafka-topics.sh --zookeeper single-kafka:2181 --create --topic number --partitions 1 --replication-factor 1
+
+
+docker exec -it go-redis-kafka-demo-master_kafka1_1 kafka-topics --zookeeper zoo1:2181 --create --topic number --partitions 1 --replication-factor 1
+
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic number --from-beginning
+
+
+Running kafka and redis
+
+docker-compose -f <file name> up <-- Running in interactive mode
+docker-compose -f <file name> up -d <-- Running in detached mode
+
+Running the application:
+
+docker-compose -f <file name> up <-- Running in interactive mode
+docker-compose -f <file name> up -d <-- Running in detached mode
+docker-compose -f <file name> up --build <-- Rebuild the container and run the application
