@@ -1,7 +1,7 @@
 
 *****************************************************************************************
 
-Work Done so far by Kaviya Kulothungan
+Work Done so far:
 
 1. I have dockerized all the dependencies in docker-compose-dependencies.yml file:
 
@@ -57,3 +57,12 @@ Tag name: v1
 
 Command used: docker push
 
+______________________________________________________________________________________________________________________________________________________________________________
+
+Challenges faced so far:
+
+1. I have not worked on GO applications so far(most of the apps i worked on are based on .net and Java). But I did my research for this assignment and to be frank, I was able to follow them easily (For example, i learned that kafka is dependent on zookeeper and i was able to configure zookeeper as well). Although, I am having some trouble making this application run. I am not sure if the issue is from docker end or from Kafka.
+
+2. I wasn't sure which docker container to use to create kafka and redis service. I selected them from docker hub, onwhichever I thought would work best for this application.
+
+3. I am able to make the application up and running, but the random numbers are not generating from the producer after it was dockerized, and thus they were not checked by the consumer whether it is an even or odd number. I will still try to work on it and research on it and see if i can fix this. 
